@@ -10,3 +10,16 @@ yarn-error.log*
 .idea
 .vscode
 
+
+# Personnages 3D d'essai en local : jamais publiés
+public/models/
+
+# Hors de l'appli : autres projets, vidéos de pub, outils locaux
+.claude/
+.cursor/
+pubs/
+nain-propre/
+nain-propre-3d/
+your-ticket-please/
+Projet-SNT.zip
+*.patch

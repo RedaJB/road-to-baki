@@ -1,0 +1,145 @@
+{
+  "repas_suggestions": [
+    {
+      "label": "Poulet roti + riz + legumes",
+      "calories": 520,
+      "protein": 45,
+      "carbs": 42,
+      "fat": 15,
+      "portionG": 350
+    },
+    {
+      "label": "Steak hache + patates douces + salade",
+      "calories": 580,
+      "protein": 38,
+      "carbs": 48,
+      "fat": 22
+    },
+    {
+      "label": "Bowl poke saumon",
+      "calories": 650,
+      "protein": 35,
+      "carbs": 55,
+      "fat": 28
+    },
+    {
+      "label": "Oeufs brouilles + avocat + pain complet",
+      "calories": 420,
+      "protein": 22,
+      "carbs": 28,
+      "fat": 24
+    },
+    {
+      "label": "Pates complete + boeuf hache + parmesan",
+      "calories": 720,
+      "protein": 42,
+      "carbs": 68,
+      "fat": 32
+    },
+    {
+      "label": "Salade cesar poulet",
+      "calories": 380,
+      "protein": 32,
+      "carbs": 12,
+      "fat": 22
+    },
+    {
+      "label": "Saumon grille + quinoa + brocolis",
+      "calories": 540,
+      "protein": 40,
+      "carbs": 38,
+      "fat": 24
+    },
+    {
+      "label": "Cottage cheese + fruits + noix",
+      "calories": 280,
+      "protein": 28,
+      "carbs": 22,
+      "fat": 10
+    },
+    {
+      "label": "Shake proteine + banane",
+      "calories": 320,
+      "protein": 35,
+      "carbs": 38,
+      "fat": 4
+    },
+    {
+      "label": "Omelette 3 oeufs + fromage",
+      "calories": 380,
+      "protein": 28,
+      "carbs": 4,
+      "fat": 28
+    }
+  ],
+  "repas_demo": [
+    {
+      "date": "TODAY",
+      "type": "petit_dej",
+      "label": "Oeufs brouilles + avocat",
+      "calories": 380,
+      "protein": 22,
+      "carbs": 12,
+      "fat": 28
+    },
+    {
+      "date": "TODAY",
+      "type": "dej",
+      "label": "Poulet roti + riz + legumes",
+      "calories": 520,
+      "protein": 45,
+      "carbs": 42,
+      "fat": 15
+    },
+    {
+      "date": "TODAY",
+      "type": "diner",
+      "label": "Steak hache + patates douces",
+      "calories": 580,
+      "protein": 38,
+      "carbs": 48,
+      "fat": 22
+    },
+    {
+      "date": "TODAY",
+      "type": "snack",
+      "label": "Shake proteine",
+      "calories": 120,
+      "protein": 25,
+      "carbs": 3,
+      "fat": 1
+    }
+  ],
+  "exercices_etendus": [
+    {
+      "id": "squat_barre",
+      "name": "Squat barre",
+      "muscle": "Quadriceps",
+      "muscles_secondaires": ["Fessiers", "Ischios"]
+    },
+    {
+      "id": "developpe",
+      "name": "Developpe militaire",
+      "muscle": "Epaules",
+      "muscles_secondaires": ["Triceps"]
+    },
+    {
+      "id": "tractions",
+      "name": "Tractions",
+      "muscle": "Dos",
+      "muscles_secondaires": ["Biceps", "Avant-bras"]
+    },
+    {
+      "id": "pompe",
+      "name": "Pompes",
+      "muscle": "Pectoraux",
+      "muscles_secondaires": ["Triceps"]
+    },
+    {
+      "id": "rowing",
+      "name": "Rowing barre",
+      "muscle": "Dos",
+      "muscles_secondaires": ["Biceps"]
+    }
+  ]
+}

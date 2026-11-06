@@ -1,0 +1,10 @@
+{
+  "model": "hero.glb",
+  "manga": { "ink": "hero-ink.png" },
+  "fists": true,
+  "anims": {
+    "sprint": "anims/sprint.glb",
+    "shadow_boxing": "anims/shadow_boxing.glb",
+    "mae_geri": "anims/mae_geri.glb"
+  }
+}

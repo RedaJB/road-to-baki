@@ -1,0 +1,12 @@
+hero.glb : dérivé de « Superhero_Male » du pack Universal Base Characters [Standard] de Quaternius
+https://quaternius.itch.io/universal-base-characters
+Licence : CC0 1.0 (domaine public, usage commercial autorisé, attribution facultative).
+Modifications (scripts/build-manga-hero.py) : visage comblé (sans traits), yeux et sourcils retirés,
+muscles épaissis, pantalon et ceinture peints, textures réduites, crinière ajoutée ;
+hero-ink.png : traits des muscles calculés à partir de la carte de normales du pack.
+
+anims/*.glb : captures de mouvement de la CMU Graphics Lab Motion Capture Database
+(sprint : sujet 09 essai 01 ; shadow_boxing : sujet 14 essai 01 ; mae_geri : sujet 135 essai 04),
+transférées sur le squelette du combattant (scripts/retarget-cmu.py).
+Utilisation libre, y compris commerciale ; revente des données interdite. Crédit :
+The data used in this project was obtained from mocap.cs.cmu.edu. The database was created with funding from NSF EIA-0196217.
