@@ -25,9 +25,13 @@ export interface MealEntry {
 interface NutritionState {
   meals: MealEntry[];
   addMeal: (input: Omit<MealEntry, 'id'>) => void;
+  updateMeal: (id: string, input: Partial<Omit<MealEntry, 'id'>>) => void;
   removeMeal: (id: string) => void;
   getMealsForDate: (date: string) => MealEntry[];
   getTotalCaloriesForDate: (date: string) => number;
+  getTotalProteinForDate: (date: string) => number;
+  getTotalCarbsForDate: (date: string) => number;
+  getTotalFatForDate: (date: string) => number;
 }
 
 const STORAGE_KEY = 'roadtobaki_meals_v1';
@@ -70,6 +74,12 @@ export function NutritionProvider({ children }: { children: React.ReactNode }) {
     ]);
   }, []);
 
+  const updateMeal = useCallback((id: string, input: Partial<Omit<MealEntry, 'id'>>) => {
+    setMeals((prev) =>
+      prev.map((m) => (m.id === id ? { ...m, ...input } : m))
+    );
+  }, []);
+
   const removeMeal = useCallback((id: string) => {
     setMeals((prev) => prev.filter((m) => m.id !== id));
   }, []);
@@ -85,15 +95,37 @@ export function NutritionProvider({ children }: { children: React.ReactNode }) {
     [getMealsForDate],
   );
 
+  const getTotalProteinForDate = useCallback(
+    (date: string) =>
+      getMealsForDate(date).reduce((sum, m) => sum + (m.protein ?? 0), 0),
+    [getMealsForDate],
+  );
+
+  const getTotalCarbsForDate = useCallback(
+    (date: string) =>
+      getMealsForDate(date).reduce((sum, m) => sum + (m.carbs ?? 0), 0),
+    [getMealsForDate],
+  );
+
+  const getTotalFatForDate = useCallback(
+    (date: string) =>
+      getMealsForDate(date).reduce((sum, m) => sum + (m.fat ?? 0), 0),
+    [getMealsForDate],
+  );
+
   const value = useMemo<NutritionState>(
     () => ({
       meals,
       addMeal,
+      updateMeal,
       removeMeal,
       getMealsForDate,
       getTotalCaloriesForDate,
+      getTotalProteinForDate,
+      getTotalCarbsForDate,
+      getTotalFatForDate,
     }),
-    [meals, addMeal, removeMeal, getMealsForDate, getTotalCaloriesForDate],
+    [meals, addMeal, updateMeal, removeMeal, getMealsForDate, getTotalCaloriesForDate, getTotalProteinForDate, getTotalCarbsForDate, getTotalFatForDate],
   );
 
   return (

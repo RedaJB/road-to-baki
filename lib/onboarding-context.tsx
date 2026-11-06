@@ -27,6 +27,18 @@ export interface OnboardingAnswers {
   experience: 'debutant' | 'intermediaire' | 'avance' | null;
   frequence: number | null;
   douleurs: Douleur[] | null;
+  objectifPrincipal: 'maigrir' | 'prendre_muscle' | 'recomposition' | 'forme' | null;
+  motivation: 'sante' | 'esthetique' | 'performance' | 'confiance' | null;
+  raisonPertePoids: 'sante' | 'look' | 'energie' | 'autre' | null;
+  niveauStress: 'faible' | 'moyen' | 'eleve' | null;
+  qualiteSommeil: 'mauvais' | 'moyen' | 'bon' | null;
+  regime: 'aucun' | 'halal' | 'vegetarien' | 'sans_lactose' | 'autre' | null;
+  contraintesSante: 'aucune' | 'diabete' | 'thyroide' | 'hypertension' | 'autre' | null;
+  shonenArchetype: 'baki' | 'yujiro' | 'jack' | 'doppo' | null;
+  resilience: 'debutant' | 'guerrier' | 'monstre' | 'demon' | null;
+  dietType: 'carnivore' | 'equilibre' | 'vegetarien' | null;
+  demonTraining: 'oui' | 'non' | null;
+  trainingLocation: 'salle' | 'maison' | null;
 }
 
 type OnboardingState = {
@@ -43,7 +55,7 @@ type OnboardingState = {
   completeOnboarding: () => void;
 };
 
-const STORAGE_KEY = 'roadtobaki_onboarding_v2';
+const STORAGE_KEY = 'roadtobaki_onboarding_v3';
 
 const defaultAnswers: OnboardingAnswers = {
   sexe: null,
@@ -56,6 +68,18 @@ const defaultAnswers: OnboardingAnswers = {
   experience: null,
   frequence: null,
   douleurs: null,
+  objectifPrincipal: null,
+  motivation: null,
+  raisonPertePoids: null,
+  niveauStress: null,
+  qualiteSommeil: null,
+  regime: null,
+  contraintesSante: null,
+  shonenArchetype: null,
+  resilience: null,
+  dietType: null,
+  demonTraining: null,
+  trainingLocation: null,
 };
 
 const OnboardingContext = createContext<OnboardingState | undefined>(undefined);

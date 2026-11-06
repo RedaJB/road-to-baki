@@ -1,0 +1,6 @@
+# Fichiers exclus d’un déploiement via la CLI Vercel
+public/models/
+pubs/
+nain-propre/
+nain-propre-3d/
+.claude/
